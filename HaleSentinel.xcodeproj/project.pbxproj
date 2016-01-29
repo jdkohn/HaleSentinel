@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CC00D891C5BD08400B08191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC00D881C5BD08300B08191 /* AppDelegate.swift */; };
+		2CC00D8B1C5BD08400B08191 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC00D8A1C5BD08400B08191 /* ViewController.swift */; };
+		2CC00D8E1C5BD08400B08191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC00D8C1C5BD08400B08191 /* Main.storyboard */; };
+		2CC00D911C5BD08400B08191 /* HaleSentinel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CC00D8F1C5BD08400B08191 /* HaleSentinel.xcdatamodeld */; };
+		2CC00D931C5BD08400B08191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CC00D921C5BD08400B08191 /* Assets.xcassets */; };
+		2CC00D961C5BD08400B08191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CC00D941C5BD08400B08191 /* LaunchScreen.storyboard */; };
+		2CC00DA11C5BD08500B08191 /* HaleSentinelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC00DA01C5BD08500B08191 /* HaleSentinelTests.swift */; };
+		2CC00DAC1C5BD08500B08191 /* HaleSentinelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC00DAB1C5BD08500B08191 /* HaleSentinelUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CC00D9D1C5BD08500B08191 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CC00D7D1C5BD08300B08191 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CC00D841C5BD08300B08191;
+			remoteInfo = HaleSentinel;
+		};
+		2CC00DA81C5BD08500B08191 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CC00D7D1C5BD08300B08191 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CC00D841C5BD08300B08191;
+			remoteInfo = HaleSentinel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CC00D851C5BD08300B08191 /* HaleSentinel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaleSentinel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CC00D881C5BD08300B08191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CC00D8A1C5BD08400B08191 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CC00D8D1C5BD08400B08191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CC00D901C5BD08400B08191 /* HaleSentinel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HaleSentinel.xcdatamodel; sourceTree = "<group>"; };
+		2CC00D921C5BD08400B08191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CC00D951C5BD08400B08191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CC00D971C5BD08400B08191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CC00D9C1C5BD08500B08191 /* HaleSentinelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaleSentinelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CC00DA01C5BD08500B08191 /* HaleSentinelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaleSentinelTests.swift; sourceTree = "<group>"; };
+		2CC00DA21C5BD08500B08191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CC00DA71C5BD08500B08191 /* HaleSentinelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaleSentinelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CC00DAB1C5BD08500B08191 /* HaleSentinelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaleSentinelUITests.swift; sourceTree = "<group>"; };
+		2CC00DAD1C5BD08500B08191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CC00D821C5BD08300B08191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC00D991C5BD08500B08191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC00DA41C5BD08500B08191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CC00D7C1C5BD08300B08191 = {
+			isa = PBXGroup;
+			children = (
+				2CC00D871C5BD08300B08191 /* HaleSentinel */,
+				2CC00D9F1C5BD08500B08191 /* HaleSentinelTests */,
+				2CC00DAA1C5BD08500B08191 /* HaleSentinelUITests */,
+				2CC00D861C5BD08300B08191 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CC00D861C5BD08300B08191 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CC00D851C5BD08300B08191 /* HaleSentinel.app */,
+				2CC00D9C1C5BD08500B08191 /* HaleSentinelTests.xctest */,
+				2CC00DA71C5BD08500B08191 /* HaleSentinelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CC00D871C5BD08300B08191 /* HaleSentinel */ = {
+			isa = PBXGroup;
+			children = (
+				2CC00D881C5BD08300B08191 /* AppDelegate.swift */,
+				2CC00D8A1C5BD08400B08191 /* ViewController.swift */,
+				2CC00D8C1C5BD08400B08191 /* Main.storyboard */,
+				2CC00D921C5BD08400B08191 /* Assets.xcassets */,
+				2CC00D941C5BD08400B08191 /* LaunchScreen.storyboard */,
+				2CC00D971C5BD08400B08191 /* Info.plist */,
+				2CC00D8F1C5BD08400B08191 /* HaleSentinel.xcdatamodeld */,
+			);
+			path = HaleSentinel;
+			sourceTree = "<group>";
+		};
+		2CC00D9F1C5BD08500B08191 /* HaleSentinelTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CC00DA01C5BD08500B08191 /* HaleSentinelTests.swift */,
+				2CC00DA21C5BD08500B08191 /* Info.plist */,
+			);
+			path = HaleSentinelTests;
+			sourceTree = "<group>";
+		};
+		2CC00DAA1C5BD08500B08191 /* HaleSentinelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2CC00DAB1C5BD08500B08191 /* HaleSentinelUITests.swift */,
+				2CC00DAD1C5BD08500B08191 /* Info.plist */,
+			);
+			path = HaleSentinelUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CC00D841C5BD08300B08191 /* HaleSentinel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CC00DB01C5BD08500B08191 /* Build configuration list for PBXNativeTarget "HaleSentinel" */;
+			buildPhases = (
+				2CC00D811C5BD08300B08191 /* Sources */,
+				2CC00D821C5BD08300B08191 /* Frameworks */,
+				2CC00D831C5BD08300B08191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HaleSentinel;
+			productName = HaleSentinel;
+			productReference = 2CC00D851C5BD08300B08191 /* HaleSentinel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CC00D9B1C5BD08500B08191 /* HaleSentinelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CC00DB31C5BD08500B08191 /* Build configuration list for PBXNativeTarget "HaleSentinelTests" */;
+			buildPhases = (
+				2CC00D981C5BD08500B08191 /* Sources */,
+				2CC00D991C5BD08500B08191 /* Frameworks */,
+				2CC00D9A1C5BD08500B08191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CC00D9E1C5BD08500B08191 /* PBXTargetDependency */,
+			);
+			name = HaleSentinelTests;
+			productName = HaleSentinelTests;
+			productReference = 2CC00D9C1C5BD08500B08191 /* HaleSentinelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2CC00DA61C5BD08500B08191 /* HaleSentinelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CC00DB61C5BD08500B08191 /* Build configuration list for PBXNativeTarget "HaleSentinelUITests" */;
+			buildPhases = (
+				2CC00DA31C5BD08500B08191 /* Sources */,
+				2CC00DA41C5BD08500B08191 /* Frameworks */,
+				2CC00DA51C5BD08500B08191 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CC00DA91C5BD08500B08191 /* PBXTargetDependency */,
+			);
+			name = HaleSentinelUITests;
+			productName = HaleSentinelUITests;
+			productReference = 2CC00DA71C5BD08500B08191 /* HaleSentinelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CC00D7D1C5BD08300B08191 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Jacob Kohn";
+				TargetAttributes = {
+					2CC00D841C5BD08300B08191 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					2CC00D9B1C5BD08500B08191 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2CC00D841C5BD08300B08191;
+					};
+					2CC00DA61C5BD08500B08191 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2CC00D841C5BD08300B08191;
+					};
+				};
+			};
+			buildConfigurationList = 2CC00D801C5BD08300B08191 /* Build configuration list for PBXProject "HaleSentinel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CC00D7C1C5BD08300B08191;
+			productRefGroup = 2CC00D861C5BD08300B08191 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CC00D841C5BD08300B08191 /* HaleSentinel */,
+				2CC00D9B1C5BD08500B08191 /* HaleSentinelTests */,
+				2CC00DA61C5BD08500B08191 /* HaleSentinelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CC00D831C5BD08300B08191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC00D961C5BD08400B08191 /* LaunchScreen.storyboard in Resources */,
+				2CC00D931C5BD08400B08191 /* Assets.xcassets in Resources */,
+				2CC00D8E1C5BD08400B08191 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC00D9A1C5BD08500B08191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC00DA51C5BD08500B08191 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CC00D811C5BD08300B08191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC00D8B1C5BD08400B08191 /* ViewController.swift in Sources */,
+				2CC00D891C5BD08400B08191 /* AppDelegate.swift in Sources */,
+				2CC00D911C5BD08400B08191 /* HaleSentinel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC00D981C5BD08500B08191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC00DA11C5BD08500B08191 /* HaleSentinelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CC00DA31C5BD08500B08191 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC00DAC1C5BD08500B08191 /* HaleSentinelUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CC00D9E1C5BD08500B08191 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CC00D841C5BD08300B08191 /* HaleSentinel */;
+			targetProxy = 2CC00D9D1C5BD08500B08191 /* PBXContainerItemProxy */;
+		};
+		2CC00DA91C5BD08500B08191 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CC00D841C5BD08300B08191 /* HaleSentinel */;
+			targetProxy = 2CC00DA81C5BD08500B08191 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CC00D8C1C5BD08400B08191 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CC00D8D1C5BD08400B08191 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CC00D941C5BD08400B08191 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CC00D951C5BD08400B08191 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CC00DAE1C5BD08500B08191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2CC00DAF1C5BD08500B08191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CC00DB11C5BD08500B08191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HaleSentinel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jk.HaleSentinel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CC00DB21C5BD08500B08191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HaleSentinel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jk.HaleSentinel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2CC00DB41C5BD08500B08191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HaleSentinelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jk.HaleSentinelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HaleSentinel.app/HaleSentinel";
+			};
+			name = Debug;
+		};
+		2CC00DB51C5BD08500B08191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HaleSentinelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jk.HaleSentinelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HaleSentinel.app/HaleSentinel";
+			};
+			name = Release;
+		};
+		2CC00DB71C5BD08500B08191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HaleSentinelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jk.HaleSentinelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HaleSentinel;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2CC00DB81C5BD08500B08191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HaleSentinelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jk.HaleSentinelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HaleSentinel;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CC00D801C5BD08300B08191 /* Build configuration list for PBXProject "HaleSentinel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CC00DAE1C5BD08500B08191 /* Debug */,
+				2CC00DAF1C5BD08500B08191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CC00DB01C5BD08500B08191 /* Build configuration list for PBXNativeTarget "HaleSentinel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CC00DB11C5BD08500B08191 /* Debug */,
+				2CC00DB21C5BD08500B08191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CC00DB31C5BD08500B08191 /* Build configuration list for PBXNativeTarget "HaleSentinelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CC00DB41C5BD08500B08191 /* Debug */,
+				2CC00DB51C5BD08500B08191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CC00DB61C5BD08500B08191 /* Build configuration list for PBXNativeTarget "HaleSentinelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CC00DB71C5BD08500B08191 /* Debug */,
+				2CC00DB81C5BD08500B08191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2CC00D8F1C5BD08400B08191 /* HaleSentinel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2CC00D901C5BD08400B08191 /* HaleSentinel.xcdatamodel */,
+			);
+			currentVersion = 2CC00D901C5BD08400B08191 /* HaleSentinel.xcdatamodel */;
+			path = HaleSentinel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2CC00D7D1C5BD08300B08191 /* Project object */;
+}
