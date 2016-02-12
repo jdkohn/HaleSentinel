@@ -38,8 +38,8 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrT-K6-VhP">
-                                            <rect key="frame" x="30" y="52" width="562" height="41"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrT-K6-VhP">
+                                            <rect key="frame" x="30" y="52" width="530" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="41" id="Osi-yr-jrS"/>
                                                 <constraint firstAttribute="height" constant="51" id="d3c-8d-RxB"/>

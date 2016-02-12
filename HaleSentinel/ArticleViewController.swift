@@ -13,6 +13,8 @@ class ArticleViewController: UIViewController {
     
     var article = NSDictionary()
     
+    let authors : [NSDictionary] = [["id": 108, "author": "Michael Foster"], ["id": 81, "author": "Henry Graham"], ["id": 79, "author": "Sylvie Corwin"], ["id": 59, "author": "Garrett Lawrence"], ["id": 61, "author": "Emma Johnson"], ["id": 83, "author": "Tucker Doyle"], ["id": 44, "author": "Jason Moore"], ["id": 97, "author": "Thea Watrous"], ["id": 100, "author": "Julia Berkey"], ["id": 40, "author": "Stella Ramos"], ["id": 13, "author": "Millie Jones"], ["id": 35, "author": "Elijah Falk"], ["id": 80, "author": "Jasmin Uxa"], ["id": 85, "author": "Dominic Davis"], ["id": 93, "author": "Dominic Danis"], ["id": 93, "author": "Luke Notkin"], ["id": 82, "author": "Mr. Vogue"], ["id": 84, "author": "Nathan Walsh"]]
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
@@ -68,7 +70,17 @@ class ArticleViewController: UIViewController {
         
         scrollView.scrollEnabled = true
         
-        authorLabel.text = (article["author"] as! String)
+        var labelSet = false
+        for(var i=0; i<authors.count; i++) {
+            if(String(authors[i]["id"] as! Int) == (article["author"] as! String)) {
+                authorLabel.text = "By: " + (authors[i]["author"] as! String)
+                labelSet = true
+                break;
+            }
+        }
+        if(!labelSet) {
+            authorLabel.text = ""
+        }
         dateLabel.text = (article["date"] as! String)
         
     }

@@ -194,6 +194,8 @@ class HomeViewController: UITableViewController, UINavigationBarDelegate {
         
         cell.preview.text = (currentDictionary.valueForKey("content") as! String)
         
+        cell.preview.frame.size.width = self.view.frame.size.width - 51
+        
         return cell
     }
     

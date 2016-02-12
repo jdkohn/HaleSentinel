@@ -138,6 +138,8 @@ class SplashScreen: UIViewController {
             }
             
             content = content.stringByReplacingOccurrencesOfString("<[^>]+>", withString: "", options: .RegularExpressionSearch, range: nil)
+            
+            content = content.stringByReplacingOccurrencesOfString("&nbsp;", withString: "", options: .RegularExpressionSearch, range: nil)
 
             
             
