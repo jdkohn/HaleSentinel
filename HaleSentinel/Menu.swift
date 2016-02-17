@@ -18,15 +18,13 @@ class Menu : UITableViewController {
     }
     
     func configureNavBar() {
-        let blue = UIColor(red: 0.0, green: 0.0, blue: 0.509, alpha: 1.0)
-        self.navigationController?.navigationBar.barTintColor = UIColor.grayColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
         
-        let logo = UIImage(named: "Icon-Small-Transparent.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        let logo = UIImage(named: "topLogo.png")
         
         let imageView = UIImageView(image:logo)
         
         self.navigationItem.titleView = imageView
-        self.navigationItem.titleView?.tintColor = UIColor.blackColor()
         
     }
 

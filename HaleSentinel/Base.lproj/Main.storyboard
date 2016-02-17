@@ -9,14 +9,14 @@
         <!--Home View Controller-->
         <scene sceneID="Orr-g2-XzU">
             <objects>
-                <tableViewController id="hK1-SR-4yp" customClass="HomeViewController" customModule="HaleSentinel" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hK1-SR-4yp" customClass="HomeViewController" customModule="The_Sentinel" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" id="pMF-wr-uiw">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="110" id="UmY-st-GrZ" customClass="ArticleCell" customModule="HaleSentinel" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="110" id="UmY-st-GrZ" customClass="ArticleCell" customModule="The_Sentinel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="568" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UmY-st-GrZ" id="1fy-Mh-rMx">
@@ -29,8 +29,8 @@
                                                 <constraint firstAttribute="height" constant="44" id="flQ-yk-Q5C"/>
                                                 <constraint firstAttribute="height" constant="44" id="xx0-sl-8PT"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -45,7 +45,7 @@
                                                 <constraint firstAttribute="height" constant="51" id="d3c-8d-RxB"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -103,7 +103,7 @@
         <!--Article View Controller-->
         <scene sceneID="f0N-Gg-lTM">
             <objects>
-                <viewController id="LGX-a1-psp" customClass="ArticleViewController" customModule="HaleSentinel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LGX-a1-psp" customClass="ArticleViewController" customModule="The_Sentinel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yNk-5E-Ovu"/>
                         <viewControllerLayoutGuide type="bottom" id="Kcj-Ew-bd8"/>
@@ -115,7 +115,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFW-fh-a7M">
                                 <rect key="frame" x="20" y="28" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="9TA-tt-O6s">
@@ -127,7 +127,7 @@
                                             <constraint firstAttribute="height" constant="49" id="YNV-JI-YZy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -138,13 +138,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b35-kN-9XF">
                                         <rect key="frame" x="321" y="183" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iz-gu-5GP">
                                         <rect key="frame" x="8" y="91" width="552" height="21"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xju-D8-SHu">
@@ -163,7 +163,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Author Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8T8-Om-udX">
                                         <rect key="frame" x="8" y="62" width="552" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="DefaultImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="uHE-f7-qaX">
@@ -264,6 +264,8 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Kcj-Ew-bd8" firstAttribute="top" secondItem="9TA-tt-O6s" secondAttribute="bottom" id="0JP-rt-9Ac"/>
                             <constraint firstItem="9TA-tt-O6s" firstAttribute="top" secondItem="yNk-5E-Ovu" secondAttribute="bottom" constant="8" id="8o5-ZS-IUM"/>
@@ -284,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RaE-s6-Ghk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3028" y="136"/>
+            <point key="canvasLocation" x="1590" y="-688"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T9v-W1-kek">
@@ -307,7 +309,7 @@
         <!--ContainerVC-->
         <scene sceneID="cdO-n0-ziu">
             <objects>
-                <viewController id="oIZ-hT-uYK" customClass="ContainerVC" customModule="HaleSentinel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oIZ-hT-uYK" customClass="ContainerVC" customModule="The_Sentinel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9IR-Hq-keB"/>
                         <viewControllerLayoutGuide type="bottom" id="trP-Mx-7dS"/>
@@ -369,6 +371,7 @@
                     <size key="freeformSize" width="568" height="568"/>
                     <connections>
                         <outlet property="scrollView" destination="bKZ-zz-Qaz" id="cqn-gC-E47"/>
+                        <segue destination="LGX-a1-psp" kind="show" identifier="showArticle" id="8D5-Ma-FyI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4h4-k1-qkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -378,7 +381,7 @@
         <!--Menu-->
         <scene sceneID="9Iv-AY-af6">
             <objects>
-                <tableViewController id="aW3-bB-OXS" customClass="Menu" customModule="HaleSentinel" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="aW3-bB-OXS" customClass="Menu" customModule="The_Sentinel" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BaV-82-CGU">
                         <rect key="frame" x="0.0" y="0.0" width="260" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -417,7 +420,7 @@
         <!--Splash Screen-->
         <scene sceneID="Hc1-zk-zAe">
             <objects>
-                <viewController id="RXK-qP-dfH" customClass="SplashScreen" customModule="HaleSentinel" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RXK-qP-dfH" customClass="SplashScreen" customModule="The_Sentinel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kbn-6L-R9p"/>
                         <viewControllerLayoutGuide type="bottom" id="iSO-4o-8Ri"/>
@@ -439,7 +442,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="halesentinel.org" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxQ-GC-pBU">
                                 <rect key="frame" x="238" y="289" width="124" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -485,4 +488,7 @@
         <image name="Sentinel.png" width="127" height="127"/>
         <image name="background.jpg" width="786" height="1000"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="8D5-Ma-FyI"/>
+    </inferredMetricsTieBreakers>
 </document>

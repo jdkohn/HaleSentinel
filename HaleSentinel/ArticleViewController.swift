@@ -24,11 +24,26 @@ class ArticleViewController: UIViewController {
     
     var image = UIImage()
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let container = self.parentViewController?.parentViewController as! ContainerVC
+        container.scrollView.scrollEnabled = false
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = article.valueForKey("title") as! String
-        contentLabel.text = article.valueForKey("content") as! String
+        
+        
+        
+        self.navigationController!.navigationBar.tintColor = UIColor.blackColor()
+        
+        self.navigationItem.backBarButtonItem?.tintColor = UIColor.blackColor()
+        
+        titleLabel.text = (article.valueForKey("title") as! String)
+        contentLabel.text = (article.valueForKey("content") as! String)
         
         let widthConstraint = NSLayoutConstraint (item: contentLabel,
             attribute: NSLayoutAttribute.Width,
@@ -83,6 +98,33 @@ class ArticleViewController: UIViewController {
         }
         dateLabel.text = (article["date"] as! String)
         
+        
+        configureNavBar()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        let container = self.parentViewController?.parentViewController as! ContainerVC
+        container.scrollView.scrollEnabled = true
+    }
+    
+
+    
+    func configureNavBar() {
+        self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
+        
+        let logo = UIImage(named: "topLogo.png")
+        
+        let imageView = UIImageView(image:logo)
+        
+        self.navigationItem.titleView = imageView
+        
+    }
+    
+    func goHome(sender: UIScreenEdgePanGestureRecognizer) {
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
+        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -104,6 +146,11 @@ class ArticleViewController: UIViewController {
             })
         })
     
+    }
+    
+    func home(sender: UIBarButtonItem) {
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController];
+        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 2], animated: true);
     }
     
     override func didReceiveMemoryWarning() {

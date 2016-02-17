@@ -12,6 +12,10 @@
 		2C215BAA1C6C3541006FB702 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BA91C6C3541006FB702 /* background.jpg */; };
 		2C215BAC1C6C42BB006FB702 /* menuButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BAB1C6C42BB006FB702 /* menuButton2.png */; };
 		2C215BB01C6D5BA9006FB702 /* menuButtonSlim2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BAF1C6D5BA9006FB702 /* menuButtonSlim2.png */; };
+		2C215BB21C6E47AB006FB702 /* bb2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BB11C6E47AB006FB702 /* bb2.png */; };
+		2C215BB61C7146CE006FB702 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BB51C7146CE006FB702 /* header.png */; };
+		2C215BB81C7148DD006FB702 /* h2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BB71C7148DD006FB702 /* h2.png */; };
+		2C215BBA1C714B7E006FB702 /* topLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BB91C714B7E006FB702 /* topLogo.png */; };
 		2C7DCF6C1C628BBD001713CC /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DCF6B1C628BBD001713CC /* Test.swift */; };
 		2C7DCF6E1C67C961001713CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DCF6D1C67C961001713CC /* HomeViewController.swift */; };
 		2C7DCF701C67CA27001713CC /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DCF6F1C67CA27001713CC /* ArticleCell.swift */; };
@@ -57,6 +61,10 @@
 		2C215BA91C6C3541006FB702 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		2C215BAB1C6C42BB006FB702 /* menuButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton2.png; sourceTree = "<group>"; };
 		2C215BAF1C6D5BA9006FB702 /* menuButtonSlim2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButtonSlim2.png; sourceTree = "<group>"; };
+		2C215BB11C6E47AB006FB702 /* bb2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bb2.png; sourceTree = "<group>"; };
+		2C215BB51C7146CE006FB702 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		2C215BB71C7148DD006FB702 /* h2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h2.png; sourceTree = "<group>"; };
+		2C215BB91C714B7E006FB702 /* topLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topLogo.png; sourceTree = "<group>"; };
 		2C7DCF6B1C628BBD001713CC /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		2C7DCF6D1C67C961001713CC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2C7DCF6F1C67CA27001713CC /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
@@ -67,7 +75,7 @@
 		2C7DCF791C6BB246001713CC /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		2C7DCF7B1C6BB29C001713CC /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
 		2C7DCF7D1C6BBDD2001713CC /* MenuItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuItem.png; sourceTree = "<group>"; };
-		2CC00D851C5BD08300B08191 /* HaleSentinel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaleSentinel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CC00D851C5BD08300B08191 /* The Sentinel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Sentinel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC00D881C5BD08300B08191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CC00D8D1C5BD08400B08191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CC00D901C5BD08400B08191 /* HaleSentinel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HaleSentinel.xcdatamodel; sourceTree = "<group>"; };
@@ -144,7 +152,7 @@
 		2CC00D861C5BD08300B08191 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2CC00D851C5BD08300B08191 /* HaleSentinel.app */,
+				2CC00D851C5BD08300B08191 /* The Sentinel.app */,
 				2CC00D9C1C5BD08500B08191 /* HaleSentinelTests.xctest */,
 				2CC00DA71C5BD08500B08191 /* HaleSentinelUITests.xctest */,
 			);
@@ -157,9 +165,13 @@
 				2C7DCF711C67CC0D001713CC /* DefaultImage.png */,
 				2C7DCF751C68FFD6001713CC /* Icon-Small-Transparent.png */,
 				2C215BA51C6C25CF006FB702 /* splashBackground.jpg */,
+				2C215BB11C6E47AB006FB702 /* bb2.png */,
 				2C215BA91C6C3541006FB702 /* background.jpg */,
+				2C215BB71C7148DD006FB702 /* h2.png */,
 				2C215BAB1C6C42BB006FB702 /* menuButton2.png */,
+				2C215BB51C7146CE006FB702 /* header.png */,
 				2C215BAF1C6D5BA9006FB702 /* menuButtonSlim2.png */,
+				2C215BB91C714B7E006FB702 /* topLogo.png */,
 				2C7DCF731C68FF15001713CC /* Icon-Small.png */,
 				2CC00DB91C5BD36400B08191 /* Sentinel.png */,
 				2C7DCF7D1C6BBDD2001713CC /* MenuItem.png */,
@@ -217,7 +229,7 @@
 			);
 			name = HaleSentinel;
 			productName = HaleSentinel;
-			productReference = 2CC00D851C5BD08300B08191 /* HaleSentinel.app */;
+			productReference = 2CC00D851C5BD08300B08191 /* The Sentinel.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2CC00D9B1C5BD08500B08191 /* HaleSentinelTests */ = {
@@ -304,7 +316,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C215BB21C6E47AB006FB702 /* bb2.png in Resources */,
 				2CC00D961C5BD08400B08191 /* LaunchScreen.storyboard in Resources */,
+				2C215BBA1C714B7E006FB702 /* topLogo.png in Resources */,
 				2C215BAA1C6C3541006FB702 /* background.jpg in Resources */,
 				2C7DCF761C68FFD6001713CC /* Icon-Small-Transparent.png in Resources */,
 				2CC00DBA1C5BD36400B08191 /* Sentinel.png in Resources */,
@@ -313,6 +327,8 @@
 				2C7DCF741C68FF15001713CC /* Icon-Small.png in Resources */,
 				2CC00D931C5BD08400B08191 /* Assets.xcassets in Resources */,
 				2C7DCF721C67CC0D001713CC /* DefaultImage.png in Resources */,
+				2C215BB81C7148DD006FB702 /* h2.png in Resources */,
+				2C215BB61C7146CE006FB702 /* header.png in Resources */,
 				2C215BA61C6C25CF006FB702 /* splashBackground.jpg in Resources */,
 				2C215BB01C6D5BA9006FB702 /* menuButtonSlim2.png in Resources */,
 				2CC00D8E1C5BD08400B08191 /* Main.storyboard in Resources */,
@@ -542,7 +558,8 @@
 				INFOPLIST_FILE = HaleSentinel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jk.HaleSentinel;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The Sentinel";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -554,7 +571,8 @@
 				INFOPLIST_FILE = HaleSentinel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jk.HaleSentinel;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "The Sentinel";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

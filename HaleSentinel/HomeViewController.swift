@@ -74,7 +74,6 @@ class HomeViewController: UITableViewController, UINavigationBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeCatagory:", name: "changeCatagory", object: nil)
         //NSNotificationCenter.defaultCenter().addObserver(self, selector: "articlesPosted:", name: "postArticles", object: nil)
         currentType = 9
@@ -116,9 +115,9 @@ class HomeViewController: UITableViewController, UINavigationBarDelegate {
     
     func configureNavBar() {
         let blue = UIColor(red: 0.0, green: 0.0, blue: 0.509, alpha: 1.0)
-        self.navigationController?.navigationBar.barTintColor = UIColor.grayColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
         
-        let logo = UIImage(named: "Icon-Small-Transparent.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        let logo = UIImage(named: "h2.png")
 
         let menuImage = UIImage(named: "menuButtonSlim2.png")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
     
@@ -128,8 +127,9 @@ class HomeViewController: UITableViewController, UINavigationBarDelegate {
         let imageView = UIImageView(image:logo)
         
         self.navigationItem.titleView = imageView
-        self.navigationItem.titleView?.tintColor = UIColor.blackColor()
+        //self.navigationItem.titleView?.tintColor = UIColor.blackColor()
         
+        self.navigationItem.backBarButtonItem?.tintColor = UIColor.blackColor()
     }
     
 
@@ -226,8 +226,4 @@ class HomeViewController: UITableViewController, UINavigationBarDelegate {
             }
         }
     }
-    
-    
-    
-    
 }

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2CC00D841C5BD08300B08191"
-               BuildableName = "HaleSentinel.app"
+               BuildableName = "The Sentinel.app"
                BlueprintName = "HaleSentinel"
                ReferencedContainer = "container:HaleSentinel.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2CC00D841C5BD08300B08191"
-            BuildableName = "HaleSentinel.app"
+            BuildableName = "The Sentinel.app"
             BlueprintName = "HaleSentinel"
             ReferencedContainer = "container:HaleSentinel.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2CC00D841C5BD08300B08191"
-            BuildableName = "HaleSentinel.app"
+            BuildableName = "The Sentinel.app"
             BlueprintName = "HaleSentinel"
             ReferencedContainer = "container:HaleSentinel.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2CC00D841C5BD08300B08191"
-            BuildableName = "HaleSentinel.app"
+            BuildableName = "The Sentinel.app"
             BlueprintName = "HaleSentinel"
             ReferencedContainer = "container:HaleSentinel.xcodeproj">
          </BuildableReference>

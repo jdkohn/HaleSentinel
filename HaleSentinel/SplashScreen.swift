@@ -144,11 +144,16 @@ class SplashScreen: UIViewController {
             
             
             
-            
+            if(content == "[supsystic-gallery id=1 position=center]") {
+                print("stupid content")
+            }
 
             
             let pd = ["title": name, "content": content, "id": id, "author": author, "catagories": catagories, "status": status, "imageLink": imageLink, "image": image, "date": date]
-            temp.append(pd)
+            
+            if(name != "" && content != "[supsystic-gallery id=1 position=center]") {
+                temp.append(pd)
+            }
         }
         articles = temp
         performSegueWithIdentifier("doneLoading", sender: nil)
