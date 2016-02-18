@@ -112,7 +112,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFW-fh-a7M">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFW-fh-a7M">
                                 <rect key="frame" x="20" y="28" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -166,7 +166,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="DefaultImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="uHE-f7-qaX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="DefaultImage3.png" translatesAutoresizingMaskIntoConstraints="NO" id="uHE-f7-qaX">
                                         <rect key="frame" x="0.0" y="120" width="568" height="245"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="170" id="SAd-Ud-FMe"/>
@@ -268,11 +268,18 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Kcj-Ew-bd8" firstAttribute="top" secondItem="9TA-tt-O6s" secondAttribute="bottom" id="0JP-rt-9Ac"/>
+                            <constraint firstItem="9TA-tt-O6s" firstAttribute="top" secondItem="vFW-fh-a7M" secondAttribute="bottom" constant="3" id="5to-Rp-Rfj"/>
                             <constraint firstItem="9TA-tt-O6s" firstAttribute="top" secondItem="yNk-5E-Ovu" secondAttribute="bottom" constant="8" id="8o5-ZS-IUM"/>
+                            <constraint firstItem="9TA-tt-O6s" firstAttribute="top" secondItem="vFW-fh-a7M" secondAttribute="bottom" constant="3" id="Om0-l3-NgK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9TA-tt-O6s" secondAttribute="trailing" constant="-20" id="hJn-5d-NUK"/>
                             <constraint firstItem="9TA-tt-O6s" firstAttribute="leading" secondItem="GAd-aL-kzd" secondAttribute="leadingMargin" constant="-20" id="mAg-PH-3Oh"/>
                             <constraint firstItem="Kcj-Ew-bd8" firstAttribute="top" secondItem="9TA-tt-O6s" secondAttribute="bottom" id="oy6-vq-Jbi"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5to-Rp-Rfj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -440,8 +447,8 @@
                                 <rect key="frame" x="236" y="153" width="128" height="128"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="halesentinel.org" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxQ-GC-pBU">
-                                <rect key="frame" x="238" y="289" width="124" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="231" y="289" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -484,11 +491,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DefaultImage.png" width="180" height="120"/>
+        <image name="DefaultImage3.png" width="360" height="220"/>
         <image name="Sentinel.png" width="127" height="127"/>
         <image name="background.jpg" width="786" height="1000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8D5-Ma-FyI"/>
+        <segue reference="hYT-bf-G1o"/>
     </inferredMetricsTieBreakers>
 </document>

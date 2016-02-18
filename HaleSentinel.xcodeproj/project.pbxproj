@@ -16,7 +16,9 @@
 		2C215BB61C7146CE006FB702 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BB51C7146CE006FB702 /* header.png */; };
 		2C215BB81C7148DD006FB702 /* h2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BB71C7148DD006FB702 /* h2.png */; };
 		2C215BBA1C714B7E006FB702 /* topLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BB91C714B7E006FB702 /* topLogo.png */; };
-		2C7DCF6C1C628BBD001713CC /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DCF6B1C628BBD001713CC /* Test.swift */; };
+		2C66D3BD1C75235100267002 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D3BC1C75235100267002 /* Reachability.swift */; };
+		2C66D3BF1C75311600267002 /* DefaultImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66D3BE1C75311600267002 /* DefaultImage2.png */; };
+		2C66D3C11C7531AC00267002 /* DefaultImage3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66D3C01C7531AC00267002 /* DefaultImage3.png */; };
 		2C7DCF6E1C67C961001713CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DCF6D1C67C961001713CC /* HomeViewController.swift */; };
 		2C7DCF701C67CA27001713CC /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7DCF6F1C67CA27001713CC /* ArticleCell.swift */; };
 		2C7DCF721C67CC0D001713CC /* DefaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C7DCF711C67CC0D001713CC /* DefaultImage.png */; };
@@ -65,7 +67,9 @@
 		2C215BB51C7146CE006FB702 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		2C215BB71C7148DD006FB702 /* h2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h2.png; sourceTree = "<group>"; };
 		2C215BB91C714B7E006FB702 /* topLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topLogo.png; sourceTree = "<group>"; };
-		2C7DCF6B1C628BBD001713CC /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		2C66D3BC1C75235100267002 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		2C66D3BE1C75311600267002 /* DefaultImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultImage2.png; sourceTree = "<group>"; };
+		2C66D3C01C7531AC00267002 /* DefaultImage3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultImage3.png; sourceTree = "<group>"; };
 		2C7DCF6D1C67C961001713CC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2C7DCF6F1C67CA27001713CC /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		2C7DCF711C67CC0D001713CC /* DefaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultImage.png; sourceTree = "<group>"; };
@@ -139,7 +143,6 @@
 		2CC00D7C1C5BD08300B08191 = {
 			isa = PBXGroup;
 			children = (
-				2C7DCF6B1C628BBD001713CC /* Test.swift */,
 				2CC00D871C5BD08300B08191 /* HaleSentinel */,
 				2CC00D9F1C5BD08500B08191 /* HaleSentinelTests */,
 				2CC00DAA1C5BD08500B08191 /* HaleSentinelUITests */,
@@ -164,6 +167,8 @@
 			children = (
 				2C7DCF711C67CC0D001713CC /* DefaultImage.png */,
 				2C7DCF751C68FFD6001713CC /* Icon-Small-Transparent.png */,
+				2C66D3C01C7531AC00267002 /* DefaultImage3.png */,
+				2C66D3BE1C75311600267002 /* DefaultImage2.png */,
 				2C215BA51C6C25CF006FB702 /* splashBackground.jpg */,
 				2C215BB11C6E47AB006FB702 /* bb2.png */,
 				2C215BA91C6C3541006FB702 /* background.jpg */,
@@ -176,6 +181,7 @@
 				2CC00DB91C5BD36400B08191 /* Sentinel.png */,
 				2C7DCF7D1C6BBDD2001713CC /* MenuItem.png */,
 				2CC00D881C5BD08300B08191 /* AppDelegate.swift */,
+				2C66D3BC1C75235100267002 /* Reachability.swift */,
 				2C7DCF6F1C67CA27001713CC /* ArticleCell.swift */,
 				2CC00D8C1C5BD08400B08191 /* Main.storyboard */,
 				2C215BA71C6C266C006FB702 /* SplashScreen.swift */,
@@ -280,6 +286,7 @@
 				TargetAttributes = {
 					2CC00D841C5BD08300B08191 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = J44PM8Q84B;
 					};
 					2CC00D9B1C5BD08500B08191 = {
 						CreatedOnToolsVersion = 7.2;
@@ -329,7 +336,9 @@
 				2C7DCF721C67CC0D001713CC /* DefaultImage.png in Resources */,
 				2C215BB81C7148DD006FB702 /* h2.png in Resources */,
 				2C215BB61C7146CE006FB702 /* header.png in Resources */,
+				2C66D3C11C7531AC00267002 /* DefaultImage3.png in Resources */,
 				2C215BA61C6C25CF006FB702 /* splashBackground.jpg in Resources */,
+				2C66D3BF1C75311600267002 /* DefaultImage2.png in Resources */,
 				2C215BB01C6D5BA9006FB702 /* menuButtonSlim2.png in Resources */,
 				2CC00D8E1C5BD08400B08191 /* Main.storyboard in Resources */,
 			);
@@ -410,8 +419,8 @@
 				2C7DCF7C1C6BB29C001713CC /* ContainerVC.swift in Sources */,
 				2C7DCF781C6A6205001713CC /* ArticleViewController.swift in Sources */,
 				2C7DCF701C67CA27001713CC /* ArticleCell.swift in Sources */,
-				2C7DCF6C1C628BBD001713CC /* Test.swift in Sources */,
 				2CC00D891C5BD08400B08191 /* AppDelegate.swift in Sources */,
+				2C66D3BD1C75235100267002 /* Reachability.swift in Sources */,
 				2CC00D911C5BD08400B08191 /* HaleSentinel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,7 +564,9 @@
 			baseConfigurationReference = 06077C4CEC1026581660D53D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HaleSentinel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jk.HaleSentinel;
 				PRODUCT_NAME = "The Sentinel";
@@ -568,7 +579,9 @@
 			baseConfigurationReference = FF54D340E8156253E4A92EFD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HaleSentinel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jk.HaleSentinel;
 				PRODUCT_NAME = "The Sentinel";

@@ -17,7 +17,22 @@ class SplashScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getArticles()
+        loadArticles()
+    }
+    
+    func loadArticles() {
+        if(Reachability.isConnectedToNetwork()) {
+            getArticles()
+        } else {
+            let alert = UIAlertController(title: "Oops!", message: "You are not connected to the Internet", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Retry", style: .Default, handler: { (action) -> Void in
+                self.loadArticles()
+            }))
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                self.presentViewController(alert, animated: true, completion: nil)
+            })
+        }
     }
     
     func getArticles() {

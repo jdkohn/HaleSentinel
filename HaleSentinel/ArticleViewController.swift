@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ArticleViewController: UIViewController {
+class ArticleViewController: UIViewController, UIScrollViewDelegate {
     
     var article = NSDictionary()
     
@@ -35,7 +35,7 @@ class ArticleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        scrollView.delegate = self
         
         
         self.navigationController!.navigationBar.tintColor = UIColor.blackColor()
@@ -63,23 +63,23 @@ class ArticleViewController: UIViewController {
             constant: self.view.frame.size.width - 16)
         self.view.addConstraint(titleWidth)
         
-            let imageWidth = NSLayoutConstraint (item: imageView,
-                attribute: NSLayoutAttribute.Width,
-                relatedBy: NSLayoutRelation.Equal,
-                toItem: nil,
-                attribute: NSLayoutAttribute.NotAnAttribute,
-                multiplier: 1,
-                constant: self.view.frame.size.width)
-            self.view.addConstraint(imageWidth)
-            
-            let imageHeight = NSLayoutConstraint (item: imageView,
-                attribute: NSLayoutAttribute.Height,
-                relatedBy: NSLayoutRelation.Equal,
-                toItem: nil,
-                attribute: NSLayoutAttribute.NotAnAttribute,
-                multiplier: 1,
-                constant: self.view.frame.size.width / 2)
-            self.view.addConstraint(imageHeight)
+        let imageWidth = NSLayoutConstraint (item: imageView,
+            attribute: NSLayoutAttribute.Width,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: nil,
+            attribute: NSLayoutAttribute.NotAnAttribute,
+            multiplier: 1,
+            constant: self.view.frame.size.width + 4)
+        self.view.addConstraint(imageWidth)
+        
+        let imageHeight = NSLayoutConstraint (item: imageView,
+            attribute: NSLayoutAttribute.Height,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: nil,
+            attribute: NSLayoutAttribute.NotAnAttribute,
+            multiplier: 1,
+            constant: self.view.frame.size.width / 2)
+        self.view.addConstraint(imageHeight)
         
         contentLabel.sizeToFit()
         
@@ -100,6 +100,16 @@ class ArticleViewController: UIViewController {
         
         
         configureNavBar()
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if scrollView.contentOffset.x>0 {
+            scrollView.contentOffset.x = 0
+        }
+        
+        if scrollView.contentOffset.x<0 {
+            scrollView.contentOffset.x = 0
+        }
     }
     
     override func viewWillDisappear(animated: Bool) {
