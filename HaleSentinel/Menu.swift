@@ -11,7 +11,7 @@ import UIKit
 
 class Menu : UITableViewController {
     
-    let menuOptions = ["All", "News", "Features", "Sports", "Opinion", "A&E", "Columns", "Weekly-Roundups", "Uncatagorized"]
+    let menuOptions = ["All", "News", "Features", "Sports", "Opinion", "Arts & Entertainment", "Columns", "Weekly-Roundups", "Uncatagorized"]
     
     override func viewDidLoad() {
         configureNavBar()

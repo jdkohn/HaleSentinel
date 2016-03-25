@@ -24,6 +24,8 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate {
     
     var image = UIImage()
     
+    var imageHeight = NSLayoutConstraint()
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -63,6 +65,8 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate {
             constant: self.view.frame.size.width - 16)
         self.view.addConstraint(titleWidth)
         
+        
+
         let imageWidth = NSLayoutConstraint (item: imageView,
             attribute: NSLayoutAttribute.Width,
             relatedBy: NSLayoutRelation.Equal,
@@ -72,13 +76,13 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate {
             constant: self.view.frame.size.width + 4)
         self.view.addConstraint(imageWidth)
         
-        let imageHeight = NSLayoutConstraint (item: imageView,
+        imageHeight = NSLayoutConstraint (item: imageView,
             attribute: NSLayoutAttribute.Height,
             relatedBy: NSLayoutRelation.Equal,
             toItem: nil,
             attribute: NSLayoutAttribute.NotAnAttribute,
             multiplier: 1,
-            constant: self.view.frame.size.width / 2)
+            constant: 0)
         self.view.addConstraint(imageHeight)
         
         contentLabel.sizeToFit()
@@ -152,10 +156,27 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate {
             }
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                self.imageView.image = self.image
+                
+                if(self.image.size.width != 0) {
+                    print("Changed Image Size")
+                    
+                    let multiplier = self.view.frame.size.width / self.image.size.width
+                    
+                    let height = self.image.size.height * multiplier
+                    
+                    let updatedHeight = NSLayoutConstraint (item: self.imageView,
+                        attribute: NSLayoutAttribute.Height,
+                        relatedBy: NSLayoutRelation.Equal,
+                        toItem: nil,
+                        attribute: NSLayoutAttribute.NotAnAttribute,
+                        multiplier: 1,
+                        constant: height)
+                    self.view.addConstraint(updatedHeight)
+                    self.view.removeConstraint(self.imageHeight)
+                    self.imageView.image = self.image
+                }
             })
         })
-    
     }
     
     func home(sender: UIBarButtonItem) {
