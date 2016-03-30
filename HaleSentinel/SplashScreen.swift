@@ -95,7 +95,7 @@ class SplashScreen: UIViewController {
             var content = decoder[i]["post_content"] as! String
             let id = decoder[i]["post_id"] as! String
             let author = decoder[i]["post_author"] as! String
-            
+            let link = decoder[i]["link"] as! String
             
             var catagories = [String]()
             if(decoder[i]["terms"]!.count != 0) {
@@ -162,9 +162,14 @@ class SplashScreen: UIViewController {
             if(content == "[supsystic-gallery id=1 position=center]") {
                 print("stupid content")
             }
+            
+            while(content.substringWithRange(Range<String.Index>(start: content.startIndex, end: content.startIndex.advancedBy(1))) == "\n") {
+                
+                content = content.substringWithRange(Range<String.Index>(start: content.startIndex.advancedBy(1), end: content.endIndex))
+            }
 
             
-            let pd = ["title": name, "content": content, "id": id, "author": author, "catagories": catagories, "status": status, "imageLink": imageLink, "image": image, "date": date]
+            let pd = ["title": name, "content": content, "id": id, "author": author, "catagories": catagories, "status": status, "imageLink": imageLink, "image": image, "date": date, "link": link]
             
             if(name != "" && content != "[supsystic-gallery id=1 position=center]") {
                 temp.append(pd)

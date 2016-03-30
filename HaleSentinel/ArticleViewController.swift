@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import Social
 
-class ArticleViewController: UIViewController, UIScrollViewDelegate {
+class ArticleViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentationControllerDelegate {
     
     var article = NSDictionary()
     
@@ -39,6 +40,9 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.delegate = self
         
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "share:")
+        
+        popoverPresentationController?.delegate = self
         
         self.navigationController!.navigationBar.tintColor = UIColor.blackColor()
         
@@ -105,6 +109,27 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate {
         
         configureNavBar()
     }
+    
+    func share(sender: UIBarButtonItem) {
+        
+        performSegueWithIdentifier("share", sender: nil)
+
+        
+//        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
+//            let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//            twitterSheet.setInitialText((self.article["link"] as! String))
+//            self.presentViewController(twitterSheet, animated: true, completion: nil)
+//        } else {
+//            let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+//            self.presentViewController(alert, animated: true, completion: nil)
+//        }
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
+    
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         if scrollView.contentOffset.x>0 {
@@ -189,4 +214,12 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "share" {
+            let popoverViewController = segue.destinationViewController as! SharingViewController
+            popoverViewController.link = article["link"] as! String
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+    }
 }

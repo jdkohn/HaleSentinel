@@ -16,6 +16,10 @@
 		2C215BB61C7146CE006FB702 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BB51C7146CE006FB702 /* header.png */; };
 		2C215BB81C7148DD006FB702 /* h2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BB71C7148DD006FB702 /* h2.png */; };
 		2C215BBA1C714B7E006FB702 /* topLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C215BB91C714B7E006FB702 /* topLogo.png */; };
+		2C4620E91CAC5E120064EDDA /* SharingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4620E81CAC5E120064EDDA /* SharingViewController.swift */; };
+		2C4620ED1CAC5F150064EDDA /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4620EA1CAC5F150064EDDA /* facebook.png */; };
+		2C4620EE1CAC5F150064EDDA /* messaging.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4620EB1CAC5F150064EDDA /* messaging.png */; };
+		2C4620EF1CAC5F150064EDDA /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C4620EC1CAC5F150064EDDA /* twitter.png */; };
 		2C66D3BD1C75235100267002 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C66D3BC1C75235100267002 /* Reachability.swift */; };
 		2C66D3BF1C75311600267002 /* DefaultImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66D3BE1C75311600267002 /* DefaultImage2.png */; };
 		2C66D3C11C7531AC00267002 /* DefaultImage3.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66D3C01C7531AC00267002 /* DefaultImage3.png */; };
@@ -67,6 +71,11 @@
 		2C215BB51C7146CE006FB702 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		2C215BB71C7148DD006FB702 /* h2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = h2.png; sourceTree = "<group>"; };
 		2C215BB91C714B7E006FB702 /* topLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topLogo.png; sourceTree = "<group>"; };
+		2C4620E11CA59D810064EDDA /* HaleSentinel v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "HaleSentinel v2.xcdatamodel"; sourceTree = "<group>"; };
+		2C4620E81CAC5E120064EDDA /* SharingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingViewController.swift; sourceTree = "<group>"; };
+		2C4620EA1CAC5F150064EDDA /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		2C4620EB1CAC5F150064EDDA /* messaging.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messaging.png; sourceTree = "<group>"; };
+		2C4620EC1CAC5F150064EDDA /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		2C66D3BC1C75235100267002 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2C66D3BE1C75311600267002 /* DefaultImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultImage2.png; sourceTree = "<group>"; };
 		2C66D3C01C7531AC00267002 /* DefaultImage3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DefaultImage3.png; sourceTree = "<group>"; };
@@ -169,6 +178,9 @@
 				2C7DCF751C68FFD6001713CC /* Icon-Small-Transparent.png */,
 				2C66D3C01C7531AC00267002 /* DefaultImage3.png */,
 				2C66D3BE1C75311600267002 /* DefaultImage2.png */,
+				2C4620EA1CAC5F150064EDDA /* facebook.png */,
+				2C4620EB1CAC5F150064EDDA /* messaging.png */,
+				2C4620EC1CAC5F150064EDDA /* twitter.png */,
 				2C215BA51C6C25CF006FB702 /* splashBackground.jpg */,
 				2C215BB11C6E47AB006FB702 /* bb2.png */,
 				2C215BA91C6C3541006FB702 /* background.jpg */,
@@ -186,6 +198,7 @@
 				2CC00D8C1C5BD08400B08191 /* Main.storyboard */,
 				2C215BA71C6C266C006FB702 /* SplashScreen.swift */,
 				2C7DCF771C6A6205001713CC /* ArticleViewController.swift */,
+				2C4620E81CAC5E120064EDDA /* SharingViewController.swift */,
 				2C7DCF6D1C67C961001713CC /* HomeViewController.swift */,
 				2C7DCF7B1C6BB29C001713CC /* ContainerVC.swift */,
 				2C7DCF791C6BB246001713CC /* Menu.swift */,
@@ -323,11 +336,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4620EF1CAC5F150064EDDA /* twitter.png in Resources */,
 				2C215BB21C6E47AB006FB702 /* bb2.png in Resources */,
 				2CC00D961C5BD08400B08191 /* LaunchScreen.storyboard in Resources */,
 				2C215BBA1C714B7E006FB702 /* topLogo.png in Resources */,
 				2C215BAA1C6C3541006FB702 /* background.jpg in Resources */,
 				2C7DCF761C68FFD6001713CC /* Icon-Small-Transparent.png in Resources */,
+				2C4620ED1CAC5F150064EDDA /* facebook.png in Resources */,
 				2CC00DBA1C5BD36400B08191 /* Sentinel.png in Resources */,
 				2C7DCF7E1C6BBDD2001713CC /* MenuItem.png in Resources */,
 				2C215BAC1C6C42BB006FB702 /* menuButton2.png in Resources */,
@@ -336,6 +351,7 @@
 				2C7DCF721C67CC0D001713CC /* DefaultImage.png in Resources */,
 				2C215BB81C7148DD006FB702 /* h2.png in Resources */,
 				2C215BB61C7146CE006FB702 /* header.png in Resources */,
+				2C4620EE1CAC5F150064EDDA /* messaging.png in Resources */,
 				2C66D3C11C7531AC00267002 /* DefaultImage3.png in Resources */,
 				2C215BA61C6C25CF006FB702 /* splashBackground.jpg in Resources */,
 				2C66D3BF1C75311600267002 /* DefaultImage2.png in Resources */,
@@ -422,6 +438,7 @@
 				2CC00D891C5BD08400B08191 /* AppDelegate.swift in Sources */,
 				2C66D3BD1C75235100267002 /* Reachability.swift in Sources */,
 				2CC00D911C5BD08400B08191 /* HaleSentinel.xcdatamodeld in Sources */,
+				2C4620E91CAC5E120064EDDA /* SharingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,9 +699,10 @@
 		2CC00D8F1C5BD08400B08191 /* HaleSentinel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				2C4620E11CA59D810064EDDA /* HaleSentinel v2.xcdatamodel */,
 				2CC00D901C5BD08400B08191 /* HaleSentinel.xcdatamodel */,
 			);
-			currentVersion = 2CC00D901C5BD08400B08191 /* HaleSentinel.xcdatamodel */;
+			currentVersion = 2C4620E11CA59D810064EDDA /* HaleSentinel v2.xcdatamodel */;
 			path = HaleSentinel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

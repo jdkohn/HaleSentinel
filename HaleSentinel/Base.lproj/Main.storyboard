@@ -261,6 +261,12 @@
                                     </mask>
                                 </variation>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcs-Pn-GHl">
+                                <rect key="frame" x="520" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -268,8 +274,11 @@
                         <constraints>
                             <constraint firstItem="Kcj-Ew-bd8" firstAttribute="top" secondItem="9TA-tt-O6s" secondAttribute="bottom" id="0JP-rt-9Ac"/>
                             <constraint firstItem="9TA-tt-O6s" firstAttribute="top" secondItem="vFW-fh-a7M" secondAttribute="bottom" constant="3" id="5to-Rp-Rfj"/>
+                            <constraint firstItem="qcs-Pn-GHl" firstAttribute="top" secondItem="GAd-aL-kzd" secondAttribute="topMargin" constant="28" id="7Xw-Gi-4MW"/>
                             <constraint firstItem="9TA-tt-O6s" firstAttribute="top" secondItem="yNk-5E-Ovu" secondAttribute="bottom" constant="8" id="8o5-ZS-IUM"/>
+                            <constraint firstItem="9TA-tt-O6s" firstAttribute="top" secondItem="qcs-Pn-GHl" secondAttribute="bottom" constant="3" id="AIc-kH-SlD"/>
                             <constraint firstItem="9TA-tt-O6s" firstAttribute="top" secondItem="vFW-fh-a7M" secondAttribute="bottom" constant="3" id="Om0-l3-NgK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qcs-Pn-GHl" secondAttribute="trailing" constant="-14" id="VJm-Cl-G18"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9TA-tt-O6s" secondAttribute="trailing" constant="-20" id="hJn-5d-NUK"/>
                             <constraint firstItem="9TA-tt-O6s" firstAttribute="leading" secondItem="GAd-aL-kzd" secondAttribute="leadingMargin" constant="-20" id="mAg-PH-3Oh"/>
                             <constraint firstItem="Kcj-Ew-bd8" firstAttribute="top" secondItem="9TA-tt-O6s" secondAttribute="bottom" id="oy6-vq-Jbi"/>
@@ -280,6 +289,8 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="authorLabel" destination="8T8-Om-udX" id="KKQ-W9-S24"/>
@@ -288,11 +299,54 @@
                         <outlet property="imageView" destination="uHE-f7-qaX" id="u81-bY-2sl"/>
                         <outlet property="scrollView" destination="9TA-tt-O6s" id="KcZ-dc-FMc"/>
                         <outlet property="titleLabel" destination="xsk-CP-Bal" id="LZM-4J-3CU"/>
+                        <segue destination="Xjb-lt-sVc" kind="popoverPresentation" identifier="share" popoverAnchorView="qcs-Pn-GHl" id="SIF-aO-fXb">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RaE-s6-Ghk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1590" y="-688"/>
+        </scene>
+        <!--Sharing View Controller-->
+        <scene sceneID="5Nz-LL-LcZ">
+            <objects>
+                <viewController id="Xjb-lt-sVc" customClass="SharingViewController" customModule="The_Sentinel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rmx-QW-fmm"/>
+                        <viewControllerLayoutGuide type="bottom" id="JXx-7d-aXN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C0f-fp-nHi">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="301"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C47-lF-H7t">
+                                <rect key="frame" x="5" y="5" width="90" height="90"/>
+                                <state key="normal" image="twitter.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLQ-ji-eRf">
+                                <rect key="frame" x="5" y="103" width="90" height="90"/>
+                                <state key="normal" image="facebook.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4l-km-er2">
+                                <rect key="frame" x="5" y="201" width="90" height="90"/>
+                                <state key="normal" image="messaging.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="100" height="301"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="100" height="301"/>
+                    <connections>
+                        <outlet property="facebook" destination="VLQ-ji-eRf" id="a43-RE-nZA"/>
+                        <outlet property="messaging" destination="h4l-km-er2" id="5pR-6f-0qL"/>
+                        <outlet property="twitter" destination="C47-lF-H7t" id="CaN-Cb-qhz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPl-zL-FDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2119" y="-813.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T9v-W1-kek">
@@ -493,6 +547,9 @@
         <image name="DefaultImage3.png" width="360" height="220"/>
         <image name="Sentinel.png" width="127" height="127"/>
         <image name="background.jpg" width="786" height="1000"/>
+        <image name="facebook.png" width="90" height="90"/>
+        <image name="messaging.png" width="90" height="90"/>
+        <image name="twitter.png" width="90" height="90"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hYT-bf-G1o"/>
