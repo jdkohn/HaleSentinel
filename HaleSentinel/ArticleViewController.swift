@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 import Social
+import CoreData
 
 class ArticleViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentationControllerDelegate {
     
     var article = NSDictionary()
     
-    let authors : [NSDictionary] = [["id": 108, "author": "Michael Foster"], ["id": 81, "author": "Henry Graham"], ["id": 79, "author": "Sylvie Corwin"], ["id": 59, "author": "Garrett Lawrence"], ["id": 61, "author": "Emma Johnson"], ["id": 83, "author": "Tucker Doyle"], ["id": 44, "author": "Jason Moore"], ["id": 97, "author": "Thea Watrous"], ["id": 100, "author": "Julia Berkey"], ["id": 40, "author": "Stella Ramos"], ["id": 13, "author": "Millie Jones"], ["id": 35, "author": "Elijah Falk"], ["id": 80, "author": "Jasmin Uxa"], ["id": 85, "author": "Dominic Davis"], ["id": 93, "author": "Dominic Danis"], ["id": 93, "author": "Luke Notkin"], ["id": 82, "author": "Mr. Vogue"], ["id": 84, "author": "Nathan Walsh"]]
+    var authors = [NSManagedObject]()
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentLabel: UILabel!
@@ -48,6 +49,19 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate, UIPopoverPr
         
         self.navigationItem.backBarButtonItem?.tintColor = UIColor.blackColor()
         
+        //Gets list of logs in
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName:"User")
+        let error: NSError?
+        var fetchedResults = [NSManagedObject]()
+        do {
+            fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+        } catch let error as NSError {
+            print("Fetch failed: \(error.localizedDescription)")
+        }
+        authors = fetchedResults
+        
         titleLabel.text = (article.valueForKey("title") as! String)
         contentLabel.text = (article.valueForKey("content") as! String)
         
@@ -68,8 +82,6 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate, UIPopoverPr
             multiplier: 1,
             constant: self.view.frame.size.width - 16)
         self.view.addConstraint(titleWidth)
-        
-        
 
         let imageWidth = NSLayoutConstraint (item: imageView,
             attribute: NSLayoutAttribute.Width,
@@ -95,8 +107,8 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate, UIPopoverPr
         
         var labelSet = false
         for(var i=0; i<authors.count; i++) {
-            if(String(authors[i]["id"] as! Int) == (article["author"] as! String)) {
-                authorLabel.text = "By: " + (authors[i]["author"] as! String)
+            if(String(authors[i].valueForKey("id") as! Int) == (article["author"] as! String)) {
+                authorLabel.text = "By: " + (authors[i].valueForKey("name") as! String)
                 labelSet = true
                 break;
             }
@@ -106,24 +118,14 @@ class ArticleViewController: UIViewController, UIScrollViewDelegate, UIPopoverPr
         }
         dateLabel.text = (article["date"] as! String)
         
-        
         configureNavBar()
+        
+        
+
     }
     
     func share(sender: UIBarButtonItem) {
-        
         performSegueWithIdentifier("share", sender: nil)
-
-        
-//        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
-//            let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-//            twitterSheet.setInitialText((self.article["link"] as! String))
-//            self.presentViewController(twitterSheet, animated: true, completion: nil)
-//        } else {
-//            let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-//            self.presentViewController(alert, animated: true, completion: nil)
-//        }
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {

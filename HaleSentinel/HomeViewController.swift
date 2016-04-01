@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import wpxmlrpc
+import CoreData
 
 class HomeViewController: UITableViewController, UINavigationBarDelegate {
     
@@ -22,6 +23,11 @@ class HomeViewController: UITableViewController, UINavigationBarDelegate {
     var weeklyRoundups = [NSDictionary]()
     var uncategorized = [NSDictionary]()
     var currentType = Int()
+    
+    var timesLoggedIn = [NSManagedObject]()
+    var users = [NSManagedObject]()
+    
+    var alert = UIAlertController()
     
     let types = ["all", "news", "features", "sports", "opinion", "ae", "columns", "weekly-roundups", "uncategorized"]
     
@@ -85,6 +91,191 @@ class HomeViewController: UITableViewController, UINavigationBarDelegate {
         
         sortArticles()
         configureNavBar()
+        
+        //Gets list of logs in
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName:"LogIn")
+        let error: NSError?
+        var fetchedResults = [NSManagedObject]()
+        do {
+            fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+        } catch let error as NSError {
+            print("Fetch failed: \(error.localizedDescription)")
+        }
+        timesLoggedIn = fetchedResults
+        
+        var lastLogIn = Double()
+        
+        //Sets time = to the last log in, later checked if > 60 days
+        if(timesLoggedIn.isEmpty) {
+            lastLogIn = NSDate().timeIntervalSince1970 - 100000000.0
+        } else {
+            lastLogIn = Double(timesLoggedIn[timesLoggedIn.count - 1].valueForKey("time") as! Int)
+        }
+        
+        if((NSDate().timeIntervalSince1970 - lastLogIn) > 5184000.0) {
+            
+            alert = UIAlertController(title: "Give us one second", message: "Updating the author list", preferredStyle: .Alert)
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+            updateLogIn(lastLogIn)
+            getUsers()
+        }
+    
+    }
+    
+    func getUsers() {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName:"User")
+        let error: NSError?
+        var fetchedResults = [NSManagedObject]()
+        do {
+            fetchedResults = try managedContext.executeFetchRequest(fetchRequest) as! [NSManagedObject]
+        } catch let error as NSError {
+            print("Fetch failed: \(error.localizedDescription)")
+        }
+        users = fetchedResults
+        
+        
+        let appDel = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = appDel.managedObjectContext
+        let coord = appDel.persistentStoreCoordinator
+        
+        //let fetchRequest = NSFetchRequest(entityName: "User")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try coord.executeRequest(deleteRequest, withContext: context)
+        } catch let error as NSError {
+            debugPrint(error)
+        }
+        
+        var url = NSURL()
+        url = NSURL(string: "http://halesentinel.org/xmlrpc.php")!
+        
+        var request = NSMutableURLRequest()
+        request = NSMutableURLRequest(URL: url)
+        
+        var session = NSURLSession.sharedSession()
+        
+        let filter : [String:AnyObject] = [
+            "number" : 1000,
+        ]
+        
+        let encoder = WPXMLRPCEncoder(method: "wp.getUsers", andParameters: [0,"Jacob Kohn", "sentinel", filter])
+        
+        do {
+            request.HTTPBody = try encoder.dataEncoded()
+            request.HTTPMethod = "POST"
+        } catch _ {
+            print("oops")
+        }
+        var task = session.dataTaskWithRequest(request) {
+            (data, response, error) -> Void in
+            if error != nil {
+                print("callback fail")
+                print(error)
+            } else {
+                
+                let decoder = WPXMLRPCDecoder(data: data)
+                
+                if(decoder.isFault()) {
+                    print("oopsies")
+                } else {
+                    
+                }
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), {
+                print("recieved")
+                
+                let decoder = WPXMLRPCDecoder(data: data)
+                
+                self.parseUsers(decoder.object() as! [NSDictionary])
+                
+                self.alert.dismissViewControllerAnimated(true, completion: nil)
+                //self.dismissViewControllerAnimated(true, completion: nil)
+            })
+        }
+        task.resume()
+    }
+    
+    
+    /*
+    * This method sorts the users
+    * Paramater: decoder [NSDictionary] - the key-value array from
+    * Wordpress that was returned from the XMLRPC API call
+    */
+    func parseUsers(decoder: [NSDictionary]) {
+        //Loops through all Users returned from the function
+        for(var i=0; i<decoder.count; i++) {
+            let appDelegate =
+            UIApplication.sharedApplication().delegate as! AppDelegate
+            let managedContext = appDelegate.managedObjectContext
+            
+            let entity =  NSEntityDescription.entityForName("User",
+                inManagedObjectContext:
+                managedContext)
+            
+            
+            
+            //Stores the user in Core Data
+            let userObject = NSManagedObject(entity: entity!,
+                insertIntoManagedObjectContext:managedContext)
+            userObject.setValue(decoder[i]["display_name"] as! String, forKey: "name")
+            userObject.setValue(Int(decoder[i]["user_id"] as! String), forKey: "id")
+            
+            var error: NSError?
+            do {
+                try managedContext.save()
+            } catch var error1 as NSError {
+                error = error1
+                print("Could not save \(error), \(error?.userInfo)")
+            }
+            
+            self.users.insert(userObject, atIndex: self.users.count)
+            
+            do {
+                try managedContext.save()
+            } catch _ {
+            }
+        }
+    }
+    
+    /*
+    * Updates the last time logged in, this is to update users, not to keep track of actual log-ins
+    */
+    func updateLogIn(lastLogIn: Double) {
+        
+        let appDelegate =
+        UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        
+        let entity =  NSEntityDescription.entityForName("LogIn",
+            inManagedObjectContext:
+            managedContext)
+        
+        //creates new log in object
+        let logInObject = NSManagedObject(entity: entity!,
+            insertIntoManagedObjectContext:managedContext)
+        logInObject.setValue(Int(NSDate().timeIntervalSince1970), forKey: "time")
+        
+        var error: NSError?
+        do {
+            try managedContext.save()
+        } catch var error1 as NSError {
+            error = error1
+            print("Could not save \(error), \(error?.userInfo)")
+        }
+        
+        self.timesLoggedIn.insert(logInObject, atIndex: self.timesLoggedIn.count)
+        
+        do {
+            try managedContext.save()
+        } catch _ {
+        }
     }
     
     func changeCatagory(notification: NSNotification) {

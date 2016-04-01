@@ -264,7 +264,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcs-Pn-GHl">
                                 <rect key="frame" x="520" y="28" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -317,29 +317,78 @@
                         <viewControllerLayoutGuide type="bottom" id="JXx-7d-aXN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="C0f-fp-nHi">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="301"/>
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="386"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C47-lF-H7t">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C47-lF-H7t">
                                 <rect key="frame" x="5" y="5" width="90" height="90"/>
                                 <state key="normal" image="twitter.png"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLQ-ji-eRf">
-                                <rect key="frame" x="5" y="103" width="90" height="90"/>
-                                <state key="normal" image="facebook.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLQ-ji-eRf">
+                                <rect key="frame" x="5" y="259" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="gb3-4S-vZQ"/>
+                                    <constraint firstAttribute="width" constant="90" id="o3d-Gm-Eos"/>
+                                </constraints>
+                                <state key="normal" image="copy.png"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gb3-4S-vZQ"/>
+                                        <exclude reference="o3d-Gm-Eos"/>
+                                    </mask>
+                                </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4l-km-er2">
-                                <rect key="frame" x="5" y="201" width="90" height="90"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4l-km-er2">
+                                <rect key="frame" x="5" y="132" width="90" height="90"/>
                                 <state key="normal" image="messaging.png"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tweet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZn-o8-mPa">
+                                <rect key="frame" x="27" y="103" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7A2-ZR-6oe">
+                                <rect key="frame" x="16" y="230" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Copy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odp-Mi-T2W">
+                                <rect key="frame" x="30" y="357" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="odp-Mi-T2W" firstAttribute="leading" secondItem="C0f-fp-nHi" secondAttribute="leadingMargin" constant="10" id="7YD-i0-Xrm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="odp-Mi-T2W" secondAttribute="trailing" constant="10" id="A7v-Ai-Vev"/>
+                            <constraint firstItem="C47-lF-H7t" firstAttribute="top" secondItem="C0f-fp-nHi" secondAttribute="topMargin" constant="5" id="DwT-Al-bC3"/>
+                            <constraint firstItem="GZn-o8-mPa" firstAttribute="leading" secondItem="C0f-fp-nHi" secondAttribute="leadingMargin" constant="7" id="GDF-2i-7rw"/>
+                            <constraint firstItem="C47-lF-H7t" firstAttribute="leading" secondItem="C0f-fp-nHi" secondAttribute="leadingMargin" constant="-15" id="HCQ-Lk-jNe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7A2-ZR-6oe" secondAttribute="trailing" constant="-5" id="ONv-j7-1Lj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C47-lF-H7t" secondAttribute="trailing" constant="-15" id="Ocx-0m-lYY"/>
+                            <constraint firstItem="7A2-ZR-6oe" firstAttribute="top" secondItem="h4l-km-er2" secondAttribute="bottom" constant="8" id="RFn-0J-Fhg"/>
+                            <constraint firstItem="JXx-7d-aXN" firstAttribute="top" secondItem="odp-Mi-T2W" secondAttribute="bottom" constant="8" id="Rpa-id-VFS"/>
+                            <constraint firstItem="odp-Mi-T2W" firstAttribute="top" secondItem="VLQ-ji-eRf" secondAttribute="bottom" constant="8" id="aZf-XC-wd5"/>
+                            <constraint firstItem="h4l-km-er2" firstAttribute="top" secondItem="GZn-o8-mPa" secondAttribute="bottom" constant="8" id="asK-8H-Sok"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GZn-o8-mPa" secondAttribute="trailing" constant="6" id="dwY-cH-OH6"/>
+                            <constraint firstItem="GZn-o8-mPa" firstAttribute="top" secondItem="C47-lF-H7t" secondAttribute="bottom" constant="8" id="hTu-LN-JPN"/>
+                            <constraint firstItem="7A2-ZR-6oe" firstAttribute="leading" secondItem="C0f-fp-nHi" secondAttribute="leadingMargin" constant="-4" id="ixB-ow-Pqt"/>
+                            <constraint firstItem="VLQ-ji-eRf" firstAttribute="top" secondItem="7A2-ZR-6oe" secondAttribute="bottom" constant="8" id="mCH-Ap-qJf"/>
+                            <constraint firstItem="VLQ-ji-eRf" firstAttribute="leading" secondItem="C0f-fp-nHi" secondAttribute="leadingMargin" constant="-15" id="oyZ-wX-RnP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VLQ-ji-eRf" secondAttribute="trailing" constant="-15" id="s5H-ey-nrr"/>
+                            <constraint firstItem="h4l-km-er2" firstAttribute="leading" secondItem="C0f-fp-nHi" secondAttribute="leadingMargin" constant="-15" id="t9B-zp-8TZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h4l-km-er2" secondAttribute="trailing" constant="-15" id="toH-8I-zhW"/>
+                        </constraints>
                     </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="100" height="301"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="100" height="386"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="100" height="301"/>
+                    <size key="freeformSize" width="100" height="386"/>
                     <connections>
-                        <outlet property="facebook" destination="VLQ-ji-eRf" id="a43-RE-nZA"/>
+                        <outlet property="copyButton" destination="VLQ-ji-eRf" id="x5p-lv-bbw"/>
                         <outlet property="messaging" destination="h4l-km-er2" id="5pR-6f-0qL"/>
                         <outlet property="twitter" destination="C47-lF-H7t" id="CaN-Cb-qhz"/>
                     </connections>
@@ -547,7 +596,7 @@
         <image name="DefaultImage3.png" width="360" height="220"/>
         <image name="Sentinel.png" width="127" height="127"/>
         <image name="background.jpg" width="786" height="1000"/>
-        <image name="facebook.png" width="90" height="90"/>
+        <image name="copy.png" width="90" height="90"/>
         <image name="messaging.png" width="90" height="90"/>
         <image name="twitter.png" width="90" height="90"/>
     </resources>
