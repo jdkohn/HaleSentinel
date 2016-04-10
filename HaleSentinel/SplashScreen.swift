@@ -63,6 +63,13 @@ class SplashScreen: UIViewController {
             if error != nil {
                 print("callback fail")
                 print(error)
+                if error?.code ==  NSURLErrorTimedOut {
+                    let alert = UIAlertController(title: "Oops!", message: "Network Connection Timed Out", preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "Retry", style: .Default, handler: { (action) -> Void in
+                        self.loadArticles()
+                    }))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                }
             } else {
                 
                 let decoder = WPXMLRPCDecoder(data: data)

@@ -34,36 +34,62 @@ class SharingViewController: UIViewController, MFMessageComposeViewControllerDel
     }
     
     func tweet(sender: UIButton) {
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
-            let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            twitterSheet.setInitialText(link + " ")
-            self.presentViewController(twitterSheet, animated: true, completion: nil)
+        if(connected()) {
+            if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter){
+                let twitterSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+                twitterSheet.setInitialText(link + " ")
+                self.presentViewController(twitterSheet, animated: true, completion: nil)
+            } else {
+                let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         } else {
-            let alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            let alert = UIAlertController(title: "Oops!", message: "You are not connected to the Internet", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
     func facebookShare(sender: UIButton) {
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
-            let facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-            facebookSheet.setInitialText(link + " ")
-            self.presentViewController(facebookSheet, animated: true, completion: nil)
+        if(connected()) {
+            if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+                let facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                facebookSheet.setInitialText(link + " ")
+                self.presentViewController(facebookSheet, animated: true, completion: nil)
+            } else {
+                let alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
         } else {
-            let alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            let alert = UIAlertController(title: "Oops!", message: "You are not connected to the Internet", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
     func message(sender: UIButton) {
-        let messageVC = MFMessageComposeViewController()
-        messageVC.body = link + " "
-        messageVC.recipients = [] // Optionally add some tel numbers
-        messageVC.messageComposeDelegate = self
-        // Open the SMS View controller
-        presentViewController(messageVC, animated: true, completion: nil)
+        if(connected()) {
+            let messageVC = MFMessageComposeViewController()
+            messageVC.body = link + " "
+            messageVC.recipients = [] // Optionally add some tel numbers
+            messageVC.messageComposeDelegate = self
+            // Open the SMS View controller
+            presentViewController(messageVC, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Oops!", message: "You are not connected to the Internet", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func connected() -> Bool {
+        if(Reachability.isConnectedToNetwork()) {
+            return true
+        } else {
+            return false
+        }
     }
     
     func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
